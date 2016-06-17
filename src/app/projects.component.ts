@@ -17,13 +17,14 @@ export class ProjectsComponent {
 		this.projects = projectService.getProjects();
 		this.activeProject = this.projects[0];
 	};
-	setActiveProject(proj) {
+	setActiveProject(proj: Object) {
 		this.activeProject = proj;
 	};
 	getActiveProject() {
 		return this.activeProject;
 	};
-	onClick(project) {
+	onClick(project: Object) {
 		this.activeProject = project;
+		console.log(JSON.stringify(project));
 	}
 }
