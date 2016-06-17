@@ -4,7 +4,7 @@ import {SkillService} from './skills.service';
 
 @Component({
 	selector: 'skills',
-	template: '<h2>Skills</h2><ul><li *ngFor="#skill of skills">{{skill}}</li></ul>',
+	templateUrl: 'app/skills.component.html',
 	providers: [SkillService]
 })
 export class SkillsComponent {

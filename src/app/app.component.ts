@@ -10,5 +10,5 @@ import { SkillsComponent } from './skills.component';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  title = 'portfolio!';
+  title = 'My portfolio!';
 }
