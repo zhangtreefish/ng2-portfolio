@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {ProjectService} from './project.service';
 import {ProjectComponent} from './project.component';
+import {Project} from './project';
 
 @Component({
 	selector: 'projects',
@@ -22,4 +23,7 @@ export class ProjectsComponent {
 	getActiveProject() {
 		return this.activeProject;
 	};
+	onClick(project) {
+		this.activeProject = project;
+	}
 }
