@@ -4,15 +4,18 @@
 <table class='table table-bordered table-hover'>
 	<thead>
 		<tr>
-			<td class='col-md-1'> title </td>
-			<td class='col-md-2'> description </td>
+			<td class='col-sm-1'> image </td>
+			<td class='col-sm-1'> title </td>
+			<td class='col-sm-2'> description </td>
 		</tr>
 	</thead>
 	<tbody class='table-striped'>
 		<tr *ngFor='let project of projects' (click)='onClick(project)'>
-			<td class='col-md-1'> {{project.title }} </td>
-			<td class='col-md-2'> {{project.description }} </td>
+			<td class='col-sm-1'> <img [src]="project.image" alt="img" width="200px" /> </td>
+			<td class='col-sm-1'> {{project.title}}> </td>
+			<td class='col-sm-2'> {{project.description}} </td>
 		</tr>
 	</tbody>
 </table>
+<p> active project: {{activeProject.title}}</p>
 <!-- <project></project> -->
