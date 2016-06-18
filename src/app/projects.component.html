@@ -12,8 +12,10 @@
 	<tbody class='table-striped'>
 		<tr *ngFor='let project of projects' (click)='onClick(project)'>
 			<td class='col-sm-1'> <img [src]="project.image" alt="img" width="200px" /> </td>
-			<td class='col-sm-1'> <a class="btn btn-primary btn-lg" [href]="project.url" role="button">{{project.title}} </a></td>
-			<td class='col-sm-2'> {{project.description}} </td>
+			<td class='col-sm-1'> <a class="btn btn-primary btn-lg" [href]="project.url">{{project.title}} </a></td>
+			<td class='col-sm-2'> {{project.description}} <a class="btn btn-info btn-sm" [href]="project.code"> Code </a> <hr>
+			Tools: <span *ngFor='let tool of project.tools'> {{tool}} </span>
+			</td>
 		</tr>
 	</tbody>
 </table>
