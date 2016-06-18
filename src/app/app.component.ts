@@ -11,4 +11,5 @@ import { SkillsComponent } from './skills.component';
 })
 export class AppComponent {
   title = 'My portfolio!';
+  color = 'rgb(0, 250, 115)';
 }
