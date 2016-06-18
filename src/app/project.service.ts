@@ -20,7 +20,7 @@ export class ProjectService {
 			},
 			{
 				"id": 3,
-				"title": "a Frogger game with a immunology twist",
+				"title": "a Frogger game with an immunology twist",
 				"dates": "2015-2015",
 				"description": "Implemented a Frogger game using Object-Oriented javaScript and HTML5 Canvas",
 				"image": "http://i.imgur.com/TMw9w29.png",
