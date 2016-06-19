@@ -3,6 +3,7 @@ import {Http, Response} from '@angular/http';
 import {ProjectService} from './project.service';
 import {ProjectComponent} from './project.component';
 import {Project} from './project';
+// import { AutoGrowDirective } from './auto-grow.directive';
 
 @Component({
 	selector: 'projects',
