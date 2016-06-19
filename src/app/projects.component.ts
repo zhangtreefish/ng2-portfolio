@@ -14,6 +14,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
 export class ProjectsComponent {
 	projects;
 	activeProject;
+	activeTool;
 	constructor(projectService: ProjectService) {
 		this.projects = projectService.getProjects();
 		this.activeProject = this.projects[0];
