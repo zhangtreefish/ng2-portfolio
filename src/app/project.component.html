@@ -1,0 +1,13 @@
+<div *ngIf="project" class="jumbotron">
+	<span class='badge'> {{project.id}} </span> {{project.title}}
+	<p> description: {{project.description}}</p>
+	<ul> tools:
+		<li *ngFor="let tool of project.tools">{{tool}} </li>
+	</ul>
+	<img [src]="project.image" alt="img" width="200px" />
+	<p><a class="btn btn-primary btn-lg" [href]="project.url" role="button">Learn more</a></p>
+<!-- 	<div>
+		<lable>title: </lable>
+		<input [(ngModel)]="project.title" placeholder="title"/>
+	</div> -->
+</div>
