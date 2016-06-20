@@ -8,6 +8,7 @@ import { AutoGrowDirective } from './auto-grow.directive';
 @Component({
 	selector: 'projects',
 	templateUrl: 'app/projects.component.html',
+	styleUrls: ['app/projects.component.css'],
 	providers: [ProjectService],
 	directives: [ProjectComponent, AutoGrowDirective]
 })

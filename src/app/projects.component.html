@@ -1,7 +1,7 @@
 <table class='table table-bordered table-hover'>
 	<tbody class='table-striped'>
 		<tr *ngFor='let project of projects' (click)='onClick(project)'>
-			<td style="font-size: 20px" class='col-md-1'> {{project.title}} </td>
+			<td class='col-md-1 proj'> {{project.title}} </td>
 		</tr>
 	</tbody>
 </table>
@@ -17,4 +17,4 @@
 		<dd class="btn btn-info btn-lg" *ngFor="let tool of activeProject.tools"> {{tool}} </dd>
 	</dl>
 </section>
-<!-- <project [project]="activeProject"></project> -->
+<!-- <details [project]="activeProject"></details> -->

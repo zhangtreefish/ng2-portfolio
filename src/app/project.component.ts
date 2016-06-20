@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ProjectsComponent } from './projects.component';
 
 @Component({
-	selector: 'project',
+	selector: 'details',
 	templateUrl: 'app/project.component.html',
 })
 export class ProjectComponent {
