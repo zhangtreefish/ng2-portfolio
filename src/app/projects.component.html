@@ -1,24 +1,20 @@
-<h2>
-	Projects
-</h2>
-<input type='text' autoGrow />
 <table class='table table-bordered table-hover'>
-	<thead>
-		<tr>
-			<td class='col-sm-1'> image </td>
-			<td class='col-sm-1'> title </td>
-			<td class='col-sm-2'> description </td>
-		</tr>
-	</thead>
 	<tbody class='table-striped'>
 		<tr *ngFor='let project of projects' (click)='onClick(project)'>
-			<td class='col-sm-1'> <img [src]="project.image" alt="img" width="200px" /> </td>
-			<td class='col-sm-1'> <a class="btn btn-primary btn-lg" [href]="project.url">{{project.title}} </a></td>
-			<td class='col-sm-2'> {{project.description}} <a class="btn btn-info btn-sm" [href]="project.code"> Code </a> <hr>
-			Tools: <span *ngFor="let tool of project.tools"> {{tool}} </span>
-			</td>
+			<td style="font-size: 20px" class='col-md-1'> {{project.title}} </td>
 		</tr>
 	</tbody>
 </table>
-<p> active project: {{activeProject.title}}</p>
+<section *ngIf="activeProject" class="jumbotron">
+	<p *ngIf="activeProject.image"> Click the image to visit {{activeProject.title}} </p>
+	<a [href]="activeProject.url"> <img *ngIf="activeProject.image" [src]="activeProject.image" alt="img" width="400px" /></a>
+	<p>{{activeProject.description}}</p>
+	<span>
+		<a class="btn btn-primary btn-lg" [href]="activeProject.code"> Code Repository</a>
+	</span>
+	<dl>
+		<dt style="font-size: 20px">tools</dt>
+		<dd class="btn btn-info" *ngFor="let tool of activeProject.tools"> {{tool}} </dd>
+	</dl>
+</section>
 <!-- <project [project]="activeProject"></project> -->
