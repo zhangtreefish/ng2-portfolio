@@ -20,7 +20,7 @@ export class ProjectService {
 				"dates": "2016-2016",
 				"description": "Showcased my projects and web develop skills",
 				"tools": ["Angular2", "typescript", "Selenium", "WebDriverIO", "Node.js", 'JasmineJS'],
-				"image": "http://i.imgur.com/yyR3ZmX.png",
+				"image": "http://i.imgur.com/UPlQTup.jpg",
 				"url": "http://zhangtreefish.github.io/ng2-portfolio",
 				"code": "https://github.com/zhangtreefish/ng2-portfolio.git"
 			},
