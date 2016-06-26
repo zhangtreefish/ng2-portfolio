@@ -2,19 +2,32 @@
 export class ProjectService {
 	getProjects(): Object[] {
 		return [
+			// {
+			// 	"id": 1,
+			// 	"genre": "front end",
+			// 	"title": "Retirement Homes",
+			// 	"dates": "2014-2015",
+			// 	"description": "Build a San Antonio retirement homes application with interactive map and search list with KnockoutJS",
+			// 	"tools": ["KnockoutJS", "google.maps", "ajax", "bootstrap", "jQuery", "Yelp API", "jsonp"],
+			// 	"image": "http://i.imgur.com/ztDG76q.jpg",
+			// 	"url": "http://zhangtreefish.github.io/Project-5-for-Front-End-Web-Developer-Nanodegree",
+			// 	"code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree"
+			// },
 			{
 				"id": 1,
-				"title": "Retirement Homes",
-				"dates": "2014-2015",
-				"description": "Build a San Antonio retirement homes application with interactive map and search list with KnockoutJS",
-				"tools": ["KnockoutJS", "google.maps", "ajax", "bootstrap", "jQuery", "Yelp API", "jsonp"],
-				"image": "http://i.imgur.com/ztDG76q.jpg",
-				"url": "http://zhangtreefish.github.io/Project-5-for-Front-End-Web-Developer-Nanodegree",
-				"code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree"
+				"genre": "front end",
+				"title": "Tour of Projects",
+				"dates": "2016-2016",
+				"description": "Showcased my projects and web develop skills",
+				"tools": ["Angular2", "typescript", "Selenium", "WebDriverIO", "Node.js", 'JasmineJS'],
+				"image": "http://i.imgur.com/yyR3ZmX.png",
+				"url": "http://zhangtreefish.github.io/ng2-portfolio",
+				"code": "https://github.com/zhangtreefish/ng2-portfolio.git"
 			},
 			{
 				"id": 2,
-				"title": "therapeutic foods",
+				"genre": "full stack",
+				"title": "Therapeutic Foods",
 				"dates": "2016-2016",
 				"description": "Developed a Flask web app, hosted it in Amazon Web Service using Apache HTTP Server and PostgreSQL on Ubuntu system",
 				"tools": ["Amazon Web Service", "Apache2", "PostgreSQL", "Ubuntu", "Linux", "Flask", "Jinja2", "Python", "json", "sqlalchemy", "oauth2", "imgur"],
@@ -24,7 +37,8 @@ export class ProjectService {
 			},
 			{
 				"id": 3,
-				"title": "a Frogger game",
+				"genre": "front end",
+				"title": "A Frogger Game",
 				"dates": "2015-2015",
 				"description": "Implemented a Frogger game with an immunology twist using Object-Oriented javaScript and HTML5 Canvas",
 				"tools": ["javascript", "object-oriented programming", "canvas", "requestAnimationFrame"],
@@ -33,48 +47,30 @@ export class ProjectService {
 				"code": "https://github.com/zhangtreefish/Project-3-for-Front-End-Web-Developer-Nanodegree"
 			},
 			{
-
-				"id": 10,
-				"title": "from mockup",
+				"id": 4,
+				"genre": "full stack",
+				"title": "Tictactoe Game API",
 				"dates": "2015-2015",
-				"description": "Turned a designer’s mockup into the semantic HTML and CSS with a 2.4% mismatch",
-				"tools": ["html5", "css3"],
-				"image": "http://i.imgur.com/coxWkyU.png",
-				"url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
+				"description": "Created a platform-agnostic, RESTful API on Google App Engine Endpoints to serve a game app",
+				"tools": ["Google App Engine Endpoints", "Python",],
+				"image": "http://i.imgur.com/Hwd5fSb.jpg",
+				"url": "https://tictactoe-2016.appspot.com/_ah/api/explorer",
+				"code": "https://github.com/zhangtreefish/Project-4-for-Full-Stack-Nanodegree-at-Udacity.git"
 			},
 			{
-				"id": 9,
-				"title": "Resume Page",
+				"id": 5,
+				"genre": "full stack",
+				"title": "A Tournament Database",
 				"dates": "2015-2015",
-				"description": "Built JSONs and dynamically add information to a resume template through jQuery",
-				"tools": ["JSON", "jQuery"],
-				"image": "https://i.imgur.com/78mvBFX.jpg",
-				"url": "http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree",
-				"code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": 8,
-				"title": "web performance optimization",
-				"dates": "2015-2015",
-				"description": "Optimized a webpage through refactoring, page speed analysis and 60 FPS methods",
-				"tools": ["Chrome DevTools", "javascript"],
-				"image": "http://i.imgur.com/XaqjwTe.jpg",
-				"url": "http://zhangtreefish.github.io/Project-4-for-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree"
-},
-			{
-				"id": 7,
-				"title": "Unit Test with Jasmine",
-				"dates": "2015-2015",
-				"description": "Performed unit-testing with JasmineJS",
-				"tools": ["JasmineJS"],
-				"image": "http://i.imgur.com/11ovdoO.jpg",
-				"url": "http://zhangtreefish.github.io/Project-6-for-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-6-for-Front-End-Web-Developer-Nanodegree"
+				"description": "Developed a PostgreSQL database to track the players and matches of a tournament",
+				"tools": ["psql", "vagrant", "Python", "PostgreSQL", "psycopg2"],
+				"image": "",
+				"url": "",
+				"code": "https://github.com/psycopg/psycopg2.git"
 			},
 			{
 				"id": 6,
+				"genre": "full stack",
 				"title": "A Movie Site",
 				"dates": "2015-2015",
 				"description": "Created a movie site with clickable trailers using Python and a web server for HTML",
@@ -84,25 +80,49 @@ export class ProjectService {
 				"code": "https://github.com/zhangtreefish/Project-1-for-Full-Stack-Web-Developer-Nanodegree.git"
 			},
 			{
-				"id": 5,
-				"title": "a Tournament Database",
+				"id": 7,
+				"genre": "front end",
+				"title": "Unit Test with Jasmine",
 				"dates": "2015-2015",
-				"description": "Developed a PostgreSQL database to track the players and matches of a tournament",
-				"tools": ["psql", "vagrant", "Python", "PostgreSQL", "psycopg2"],
-				"image": "",
-				"url": "",
-				"code": "https://github.com/psycopg/psycopg2.git"
+				"description": "Performed unit-testing with JasmineJS",
+				"tools": ["JasmineJS"],
+				"image": "http://i.imgur.com/11ovdoO.jpg",
+				"url": "http://zhangtreefish.github.io/Project-6-for-Front-End-Web-Developer-Nanodegree/",
+				"code": "https://github.com/zhangtreefish/Project-6-for-Front-End-Web-Developer-Nanodegree"
 			},
 			{
-				"id": 4,
-				"title": "Tictactoe Game API",
+				"id": 8,
+				"genre": "front end",
+				"title": "Web Performance Optimization",
 				"dates": "2015-2015",
-				"description": "Created a platform-agnostic, RESTful API on Google App Engine Endpoints to serve a game app",
-				"tools": ["Google App Engine Endpoints", "Python", ],
-				"image": "http://i.imgur.com/Hwd5fSb.jpg",
-				"url": "https://tictactoe-2016.appspot.com/_ah/api/explorer",
-				"code": "https://github.com/zhangtreefish/Project-4-for-Full-Stack-Nanodegree-at-Udacity.git"
+				"description": "Optimized a webpage through refactoring, page speed analysis and 60 FPS methods",
+				"tools": ["Chrome DevTools", "javascript"],
+				"image": "http://i.imgur.com/XaqjwTe.jpg",
+				"url": "http://zhangtreefish.github.io/Project-4-for-Front-End-Web-Developer-Nanodegree/",
+				"code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree"
 			},
+			{
+				"id": 9,
+				"genre": "front end",
+				"title": "Resume Page",
+				"dates": "2015-2015",
+				"description": "Built JSONs and dynamically add information to a resume template through jQuery",
+				"tools": ["JSON", "jQuery"],
+				"image": "https://i.imgur.com/78mvBFX.jpg",
+				"url": "http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree",
+				"code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree"
+			},
+			{
+				"id": 10,
+				"genre": "front end",
+				"title": "Mockup",
+				"dates": "2015-2015",
+				"description": "Turned a designer’s mockup into the semantic HTML and CSS with a 2.4% mismatch",
+				"tools": ["html5", "css3"],
+				"image": "http://i.imgur.com/coxWkyU.png",
+				"url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
+				"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
+			}
 		]
 	};
 }
