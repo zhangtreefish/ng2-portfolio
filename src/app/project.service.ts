@@ -1,18 +1,7 @@
+import { Project } from './project';
+import {Injectable} from '@angular/core';
 
-export class ProjectService {
-	getProjects(): Object[] {
-		return [
-			// {
-			// 	"id": 1,
-			// 	"genre": "front end",
-			// 	"title": "Retirement Homes",
-			// 	"dates": "2014-2015",
-			// 	"description": "Build a San Antonio retirement homes application with interactive map and search list with KnockoutJS",
-			// 	"tools": ["KnockoutJS", "google.maps", "ajax", "bootstrap", "jQuery", "Yelp API", "jsonp"],
-			// 	"image": "http://i.imgur.com/ztDG76q.jpg",
-			// 	"url": "http://zhangtreefish.github.io/Project-5-for-Front-End-Web-Developer-Nanodegree",
-			// 	"code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree"
-			// },
+const PROJECTS: Project[] = [
 			{
 				"id": 1,
 				"genre": "front end",
@@ -123,6 +112,18 @@ export class ProjectService {
 				"url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
 				"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
 			}
-		]
-	};
+		];
+
+let projectsPromise = Promise.resolve(PROJECTS);
+
+@Injectable()
+export class ProjectService {
+	getProjects(): Promise<Project[]> {
+		return projectsPromise;
+	}
+
+	getProject(id:number) {
+		this.getProjects()
+		.then(projects => projects.filter(project => project.id===id)[0]);)
+	}
 }

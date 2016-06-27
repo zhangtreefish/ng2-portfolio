@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectsComponent } from './projects.component';
 import { SkillsComponent } from './skills.component';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 @Component({
   moduleId: module.id,
