@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {Http, Response} from '@angular/http';
+
 import {SkillService} from './skills.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'skills',
@@ -9,8 +10,8 @@ import {SkillService} from './skills.service';
 	providers: [SkillService]
 })
 export class SkillsComponent {
-	skills;
-	constructor(skillService: SkillService){
+	skills: String[];
+	constructor(private skillService: SkillService){
 		this.skills = skillService.getSkills();
 	}
 }
