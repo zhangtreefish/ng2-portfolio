@@ -7,9 +7,9 @@ import {Project} from './project';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-	templateUrl: 'app/projects.component.html',
-	styleUrls: ['app/projects.component.css'],
-	providers: [ProjectService]
+	moduleId: module.id,
+	templateUrl: 'projects.component.html',
+	styleUrls: ['projects.component.css']
 })
 export class ProjectsComponent implements OnInit, OnDestroy{
 	projects: Project[];

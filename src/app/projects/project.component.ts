@@ -6,7 +6,8 @@ import {Project} from './project';
 import {ProjectService} from './project.service';
 
 @Component({
-	templateUrl: 'app/project.component.html',
+  moduleId: module.id,
+	templateUrl: 'project.component.html',
 })
 export class ProjectComponent implements OnInit, OnDestroy {
 	project: Project;
