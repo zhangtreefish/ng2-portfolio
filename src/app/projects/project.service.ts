@@ -118,7 +118,6 @@ let projectsPromise = Promise.resolve(PROJECTS);
 
 @Injectable()
 export class ProjectService {
-	// getProjects(): Promise<Project[]> {
 	getProjects() {
 		return projectsPromise;
 	}

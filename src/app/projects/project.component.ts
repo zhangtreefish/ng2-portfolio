@@ -35,4 +35,11 @@ export class ProjectComponent implements OnInit, OnDestroy {
 	goBack() {
 		window.history.back();
 	}
+
+  gotoProjects() {
+      let projectId = this.project ? this.project.id : null;
+      this._router.navigate(
+        ['/projects'], {queryParams: { id: projectId}
+      });
+  }
 }

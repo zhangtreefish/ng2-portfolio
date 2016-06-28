@@ -7,15 +7,14 @@ import {Project} from './project';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-	selector: 'projects',
 	templateUrl: 'app/projects.component.html',
 	styleUrls: ['app/projects.component.css'],
 	providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit, OnDestroy{
 	projects: Project[];
-	sub: any;
-	private activeId: number;
+	private _sub: any;
+	private _activeId: number;
 
 	constructor(
 		private _projectService: ProjectService,
@@ -23,18 +22,18 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     	private _route: ActivatedRoute) {}
 
 	ngOnInit() {
-    this.sub = this._route
-    .params
-    .subscribe(
-    	params => {
-        	this.activeId = +params['id'];
+    this._sub = this._router
+      	.routerState
+      	.queryParams
+    	.subscribe(params => {
+        	this._activeId = +params['id'];
         	this._projectService.getProjects()
-          	.then(projects => this.projects = projects);
+          	.then(projs => this.projects = projs);
       	});
     }
 
 	ngOnDestroy() {
-	this.sub.unsubscribe();
+	this._sub.unsubscribe();
 	}
 
 	onClick(project: Project) {
