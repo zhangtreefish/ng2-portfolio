@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 // import { Project } from './project';
-import { ProjectsComponent } from './projects.component';
+//import { ProjectsComponent } from './projects.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import {Project} from './project';
 import {ProjectService} from './project.service';
 
 @Component({
   moduleId: module.id,
-	templateUrl: 'project.component.html',
+	templateUrl: 'project.component.html'
 })
 export class ProjectComponent implements OnInit, OnDestroy {
 	project: Project;
@@ -40,7 +40,7 @@ export class ProjectComponent implements OnInit, OnDestroy {
   gotoProjects() {
       let projectId = this.project ? this.project.id : null;
       this._router.navigate(
-        ['/projects'], {queryParams: { id: projectId}
-      });
+        ['/projects'], {queryParams: { id: projectId}}
+      );
   }
 }
