@@ -1,7 +1,23 @@
-<table class='table table-bordered table-hover'>
-	<tbody class='table-striped'>
-		<tr *ngFor='let project of projects' (click)='onClick(project)'>
-			<td class='col-md-1 proj'> {{project.title}} </td>
-		</tr>
-	</tbody>
-</table>
+<panel class='front'>
+    <p class='title'>
+        Front End
+        <img src='http://i.imgur.com/DflbTGt.jpg' alt='image' width='100px'/>
+    </p>
+    <ul class="projects">
+        <li *ngFor="let project of frontEndProjects" [class.selected]="project === selectedProject" (click)="onClick(project)">
+            <span class="badge">{{project.id}}</span> {{project.title}}
+        </li>
+    </ul>
+</panel>
+<panel class='full'>
+    <p class='title'>
+        <img src='http://i.imgur.com/3you7es.jpg' alt='image' width='100px'/>
+        Full Stack
+    <p>
+    <ul class="projects">
+        <li *ngFor="let project of fullStackProjects" [class.selected]="project === selectedProject" (click)="onClick(project)">
+            <span class="badge">{{project.id}}</span> {{project.title}}
+        </li>
+    </ul>
+</panel>
+

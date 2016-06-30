@@ -12,9 +12,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 	styleUrls: ['projects.component.css']
 })
 export class ProjectsComponent implements OnInit, OnDestroy{
-	projects: Project[];
+	frontEndProjects: Project[];
+	fullStackProjects: Project[];
 	private _sub: any;
-	private _activeId: number;
+	private selectedId: string;
 
 	constructor(
 		private _projectService: ProjectService,
@@ -26,15 +27,20 @@ export class ProjectsComponent implements OnInit, OnDestroy{
       	.routerState
       	.queryParams
     	.subscribe(params => {
-        	this._activeId = +params['id'];
-        	this._projectService.getProjects()
-          	.then(projs => this.projects = projs);
+           	this._projectService.getProjects().then(projects => {
+				this.frontEndProjects = projects
+					.filter(project => project.genre === 'front end');
+				this.fullStackProjects = projects
+					.filter(project => project.genre === 'full stack');
+			})
       	});
     }
 
 	ngOnDestroy() {
 	this._sub.unsubscribe();
 	}
+
+	isSelected(project: Project) { return project.id === this.selectedId; }
 
 	onClick(project: Project) {
 		this._router.navigate(['/project', project.id]);
