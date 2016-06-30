@@ -2,7 +2,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 
 import { ProjectsRoutes } from './projects/projects.routes';
 // import { ProjectsComponent } from './projects/projects.component';
-export const routes: RouterConfig = [
+const routes: RouterConfig = [
   ...ProjectsRoutes
 ];
 // export const routes: RouterConfig = [

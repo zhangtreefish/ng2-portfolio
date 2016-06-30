@@ -1,7 +1,7 @@
 import { Project } from './project';
 import {Injectable} from '@angular/core';
 
-const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
 			{
 				"id": "1",
 				"genre": "front end",
@@ -111,7 +111,18 @@ const PROJECTS: Project[] = [
 				"image": "http://i.imgur.com/coxWkyU.png",
 				"url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
 				"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
-			}
+			},
+			{
+				"id": "11",
+				"genre": "front end",
+				"title": "Ajax",
+				"dates": "2015-2015",
+				"description": "Called Google Street View Image API, Wikipedia API and NY Times API in this move planner",
+				"tools": ["Ajax", "jQuery", "Google Street View Image API", "Wikipedia API", "NY Times API"],
+				"image": "http://i.imgur.com/Hj8sHVm.jpg",
+				"url": "http://zhangtreefish.github.io/minicourse-ajax-project/",
+				"code": "https://github.com/zhangtreefish/minicourse-ajax-project"
+			},
 		];
 
 let projectsPromise = Promise.resolve(PROJECTS);
@@ -122,7 +133,7 @@ export class ProjectService {
 		return projectsPromise;
 	}
 
-	getProject(id: number | string) {
+	getProject(id: string) {
 		return projectsPromise
 		.then(projects => projects.filter(project => project.id===id)[0]);
 	}

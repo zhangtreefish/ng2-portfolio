@@ -29,7 +29,6 @@
     "core-js": "^2.4.0",
     "zone.js": "^0.6.12",
     "bootstrap": "^3.3.6",
-    "angular2-in-memory-web-api": "0.0.12",
     "ng2-bootstrap": "^1.0.17"
   },
   "devDependencies": {
@@ -44,7 +43,7 @@
     "protractor": "3.3.0",
     "ts-node": "0.5.5",
     "tslint": "3.11.0",
-    "typescript": "1.8.10",
+    "typescript": "1.9.0-dev.20160610-1.0",
     "concurrently": "^2.0.0",
     "lite-server": "^2.2.0",
     "typescript": "^1.8.10",
