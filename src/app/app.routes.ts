@@ -1,13 +1,11 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 
 import { ProjectsRoutes } from './projects/projects.routes';
-// import { ProjectsComponent } from './projects/projects.component';
+import { SkillsRoutes } from './skills/skills.routes';
 const routes: RouterConfig = [
-  ...ProjectsRoutes
+  ...ProjectsRoutes,
+  ...SkillsRoutes
 ];
-// export const routes: RouterConfig = [
-// 	{ path: 'projects', component: ProjectsComponent }
-// 	];
 
 export const APP_ROUTER_PROVIDERS = [
   provideRouter(routes, {enableTracing: true})
