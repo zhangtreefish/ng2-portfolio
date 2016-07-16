@@ -3,6 +3,7 @@ import { provideRouter, RouterConfig } from '@angular/router';
 import { ProjectsRoutes } from './projects/projects.routes';
 import { SkillsRoutes } from './skills/skills.routes';
 const routes: RouterConfig = [
+  { path: '', redirectTo: 'skills', terminal: true },
   ...ProjectsRoutes,
   ...SkillsRoutes
 ];
