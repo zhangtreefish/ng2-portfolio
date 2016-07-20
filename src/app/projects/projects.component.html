@@ -5,7 +5,7 @@
     </p>
     <ul class="projects">
         <li *ngFor="let project of frontEndProjects" [class.selected]="project === selectedProject" (click)="onClick(project)">
-            <span class="badge">{{project.id}}</span> {{project.title}}
+            {{project.title}}
         </li>
     </ul>
 </panel>
@@ -16,7 +16,7 @@
     <p>
     <ul class="projects">
         <li *ngFor="let project of fullStackProjects" [class.selected]="project === selectedProject" (click)="onClick(project)">
-            <span class="badge">{{project.id}}</span> {{project.title}}
+            {{project.title}}
         </li>
     </ul>
 </panel>
