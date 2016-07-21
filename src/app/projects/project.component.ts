@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 // import { Project } from './project';
 //import { ProjectsComponent } from './projects.component';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,8 @@ import {ProjectService} from './project.service';
 	templateUrl: 'project.component.html'
 })
 export class ProjectComponent implements OnInit, OnDestroy {
-	project: Project;
+	@Input()
+  project: Project;
 	private _sub: any;
 
 	constructor(
