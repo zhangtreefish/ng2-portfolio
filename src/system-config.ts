@@ -49,7 +49,8 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js'
+    'main': 'main.js',
+    'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api'
   },
   packages: cliSystemConfigPackages
 });
