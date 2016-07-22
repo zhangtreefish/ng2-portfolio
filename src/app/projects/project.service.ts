@@ -1,140 +1,73 @@
 import { Project } from './project';
-import {Injectable} from '@angular/core';
-
-export const PROJECTS: Project[] = [
-			{
-				"id": "1",
-				"genre": "front end",
-				"title": "Tour of Projects",
-				"dates": "2016-2016",
-				"description": "Showcased my projects and web develop skills",
-				"tools": ["Angular2", "TypeScript", "Angular2 CLI", "Selenium", "WebDriverIO", "Node.js", 'JasmineJS'],
-				"image": "http://i.imgur.com/yyR3ZmX.png",
-				"url": "http://zhangtreefish.github.io/ng2-portfolio",
-				"code": "https://github.com/zhangtreefish/ng2-portfolio.git"
-			},
-			{
-				"id": "2",
-				"genre": "full stack",
-				"title": "Therapeutic Foods",
-				"dates": "2016-2016",
-				"description": "Developed a Flask web app, hosted it in Amazon Web Service using Apache HTTP Server and PostgreSQL on Ubuntu system",
-				"tools": ["Amazon Web Service", "Apache2", "PostgreSQL", "Ubuntu", "Linux", "Flask", "Jinja2", "Python", "json", "sqlalchemy", "oauth2", "imgur"],
-				"image": "http://i.imgur.com/dd4d0fr.png",
-				"url": "http://ec2-52-38-199-253.us-west-2.compute.amazonaws.com/",
-				"code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity"
-			},
-			{
-				"id": "3",
-				"genre": "front end",
-				"title": "A Frogger Game",
-				"dates": "2015-2015",
-				"description": "Implemented a Frogger game with an immunology twist using Object-Oriented javaScript and HTML5 Canvas",
-				"tools": ["javascript", "object-oriented programming", "canvas", "requestAnimationFrame"],
-				"image": "http://i.imgur.com/TMw9w29.png",
-				"url": "https://zhangtreefish.github.io/Project-3-for-Front-End-Web-Developer-Nanodegree",
-				"code": "https://github.com/zhangtreefish/Project-3-for-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": "4",
-				"genre": "full stack",
-				"title": "Tictactoe Game API",
-				"dates": "2015-2015",
-				"description": "Created a platform-agnostic, RESTful API on Google App Engine Endpoints to serve a game app",
-				"tools": ["Google App Engine Endpoints", "Python",],
-				"image": "http://i.imgur.com/Hwd5fSb.jpg",
-				"url": "https://tictactoe-2016.appspot.com/_ah/api/explorer",
-				"code": "https://github.com/zhangtreefish/Project-4-for-Full-Stack-Nanodegree-at-Udacity.git"
-			},
-			{
-				"id": "5",
-				"genre": "full stack",
-				"title": "A Tournament Database",
-				"dates": "2015-2015",
-				"description": "Developed a PostgreSQL database to track the players and matches of a tournament",
-				"tools": ["psql", "vagrant", "Python", "PostgreSQL", "psycopg2"],
-				"image": "",
-				"url": "",
-				"code": "https://github.com/psycopg/psycopg2.git"
-			},
-			{
-				"id": "6",
-				"genre": "full stack",
-				"title": "A Movie Site",
-				"dates": "2015-2015",
-				"description": "Created a movie site with clickable trailers using Python and a web server for HTML",
-				"tools": ["Python", "Python modules of webbrowser, re, os"],
-				"image": "http://i.imgur.com/YO1cjJr.png",
-				"url": "http://zhangtreefish.github.io/Project-1-for-Full-Stack-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-1-for-Full-Stack-Web-Developer-Nanodegree.git"
-			},
-			{
-				"id": "7",
-				"genre": "front end",
-				"title": "Unit Test with Jasmine",
-				"dates": "2015-2015",
-				"description": "Performed unit-testing with JasmineJS",
-				"tools": ["JasmineJS"],
-				"image": "http://i.imgur.com/11ovdoO.jpg",
-				"url": "http://zhangtreefish.github.io/Project-6-for-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-6-for-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": "8",
-				"genre": "front end",
-				"title": "Web Performance Optimization",
-				"dates": "2015-2015",
-				"description": "Optimized a webpage through refactoring, page speed analysis and 60 FPS methods",
-				"tools": ["Chrome DevTools", "javascript"],
-				"image": "http://i.imgur.com/XaqjwTe.jpg",
-				"url": "http://zhangtreefish.github.io/Project-4-for-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": "9",
-				"genre": "front end",
-				"title": "Resume Page",
-				"dates": "2015-2015",
-				"description": "Built JSONs and dynamically add information to a resume template through jQuery",
-				"tools": ["JSON", "jQuery"],
-				"image": "https://i.imgur.com/78mvBFX.jpg",
-				"url": "http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree",
-				"code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": "10",
-				"genre": "front end",
-				"title": "Mockup",
-				"dates": "2015-2015",
-				"description": "Turned a designer’s mockup into the semantic HTML and CSS with a 2.4% mismatch",
-				"tools": ["html5", "css3"],
-				"image": "http://i.imgur.com/coxWkyU.png",
-				"url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
-				"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
-			},
-			{
-				"id": "11",
-				"genre": "front end",
-				"title": "Ajax",
-				"dates": "2015-2015",
-				"description": "Called Google Street View Image API, Wikipedia API and NY Times API in this move planner",
-				"tools": ["Ajax", "jQuery", "Google Street View Image API", "Wikipedia API", "NY Times API"],
-				"image": "http://i.imgur.com/Hj8sHVm.jpg",
-				"url": "http://zhangtreefish.github.io/minicourse-ajax-project/",
-				"code": "https://github.com/zhangtreefish/minicourse-ajax-project"
-			},
-		];
-
-let projectsPromise = Promise.resolve(PROJECTS);
+import { Injectable } from '@angular/core';
+import 'rxjs/add/operator/toPromise';
+import { Headers, Http } from '@angular/http';
 
 @Injectable()
 export class ProjectService {
-	getProjects() {
-		return projectsPromise;
-	}
+    private projectsUrl = 'app/projects';  // URL to web api
 
-	getProject(id: string) {
-		return projectsPromise
-		.then(projects => projects.filter(project => project.id===id)[0]);
-	}
+    constructor(private http: Http) { }
+
+    private handleError(error: any) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
+    }
+
+    getProjects() {
+        return this.http.get(this.projectsUrl)
+        .toPromise()
+        .then(response => response.json().data as Project[])
+        .catch(this.handleError);
+    };
+    getProject(id: string) {
+        return this.getProjects()
+        .then(projects => projects.find(project => project.id===id));
+    };
+
+    delete(project: Project) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let url = `${this.projectsUrl}/${project.id}`;
+
+        return this.http
+             .delete(url, {headers: headers})
+             .toPromise()
+             .catch(this.handleError);
+    }
+
+    save(project: Project): Promise<Project>  {
+        if (project.id) {
+        return this.put(project);
+    }
+        return this.post(project);
+    }
+
+    // Add new Project
+    private post(project: Project): Promise<Project> {
+        let headers = new Headers({
+            'Content-Type': 'application/json'});
+
+        return this.http
+            .post(this.projectsUrl, JSON.stringify(project), {headers: headers})
+            .toPromise()
+            .then(res => res.json().data)
+            .catch(this.handleError);
+    };
+
+    // Update existing Project
+    private put(project: Project) {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+
+        let url = `${this.projectsUrl}/${project.id}`;
+
+        return this.http
+             .put(url, JSON.stringify(project), {headers: headers})
+             .toPromise()
+             .then(() => project)
+             .catch(this.handleError);
+    };
 }
+
