@@ -6,7 +6,7 @@ import { SkillsRoutes } from './skills/skills.routes';
 // import { ProjectsComponent } from './projects/projects.component';
 // import { ProjectComponent } from './projects/project.component';
 
-const routes: RouterConfig = [
+export const routes: RouterConfig = [
   ...ProjectsRoutes,
   ...SkillsRoutes,
   // { path: 'skills',  component: SkillsComponent },
