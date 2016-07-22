@@ -12,7 +12,7 @@ import {ProjectService} from './project.service';
 export class ProjectComponent implements OnInit, OnDestroy {
 	@Input()
   project: Project;
-	private _sub: any;
+	private _subscr: any;
 
 	constructor(
 		private _projectService: ProjectService,
@@ -24,14 +24,14 @@ export class ProjectComponent implements OnInit, OnDestroy {
   //   this.id = r.params.map(r => r.id);
   // }
   ngOnInit() {
-  		this._sub = this._route.params.subscribe(params => {
+  		this._subscr = this._route.params.subscribe(params => {
      		let id = params['id'];
      		this._projectService.getProject(id).then(p => this.project = p);
    		});
    }
 
   ngOnDestroy() {
-  		this._sub.unsubscribe();
+  		this._subscr.unsubscribe();
 	}
 
 	goBack() {
