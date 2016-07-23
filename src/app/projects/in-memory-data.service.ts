@@ -1,7 +1,7 @@
 export class InMemoryDataService {
   createDb() {
-    let projects = {
-      "data": [
+    let projects =
+            [
                 {
                     "id": "1",
                     "genre": "front end",
@@ -123,8 +123,8 @@ export class InMemoryDataService {
                     "url": "http://zhangtreefish.github.io/minicourse-ajax-project/",
                     "code": "https://github.com/zhangtreefish/minicourse-ajax-project"
                 }
-            ]
-          };
-    return {projects};
-  }
+            ];
+
+        return {projects};
+    }
 }
