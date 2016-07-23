@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
-// import { Project } from './project';
-//import { ProjectsComponent } from './projects.component';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import {Project} from './project';
 import {ProjectService} from './project.service';
@@ -19,10 +18,6 @@ export class ProjectComponent implements OnInit, OnDestroy {
 		private _router: Router,
     private _route: ActivatedRoute){}
 
-  // 	constructor(r: ActivatedRoute) {
-  //   //r.params is an observable
-  //   this.id = r.params.map(r => r.id);
-  // }
   ngOnInit() {
   		this._subscr = this._route.params.subscribe(params => {
      		let id = params['id'];

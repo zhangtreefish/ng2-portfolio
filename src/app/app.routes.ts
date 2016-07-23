@@ -9,12 +9,13 @@ import { SkillsRoutes } from './skills/skills.routes';
 export const routes: RouterConfig = [
   ...ProjectsRoutes,
   ...SkillsRoutes,
-  // { path: 'skills',  component: SkillsComponent },
-  // { path: 'projects',  component: ProjectsComponent },
-  // { path: 'project/:id', component: ProjectComponent },
   { path: '', redirectTo: 'skills', terminal: true }
 ];
 
 export const APP_ROUTER_PROVIDERS = [
   provideRouter(routes, {enableTracing: true})
 ];
+
+  // { path: 'skills',  component: SkillsComponent },
+  // { path: 'projects',  component: ProjectsComponent },
+  // { path: 'project/:id', component: ProjectComponent },
