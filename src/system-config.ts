@@ -7,10 +7,12 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+   'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,8 +51,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js',
-    'angular2-in-memory-web-api': 'vendor/angular2-in-memory-web-api'
+    'main': 'main.js'
   },
   packages: cliSystemConfigPackages
 });
