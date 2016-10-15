@@ -130,8 +130,8 @@ export class InMemoryDataService {
                     "dates": "2016-present",
                     "description": "Contribute towards the front end development of the open source project for and by Udacity Alumni",
                     "tools": ["React", "Redux", "Scalable React Boilerplate", "Grommet", "Node"],
-                    "image": "",
-                    "url": "https://udacity-alumni-api.herokuapp.com",
+                    "image": "http://i.imgur.com/N5oMeud.jpg",
+                    "url": "https://udacity-alumni-client.herokuapp.com",
                     "code": "https://github.com/udacityalumni/alumni-client"
                 }
             ];
