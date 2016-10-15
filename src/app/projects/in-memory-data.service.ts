@@ -122,6 +122,17 @@ export class InMemoryDataService {
                     "image": "http://i.imgur.com/Hj8sHVm.jpg",
                     "url": "http://zhangtreefish.github.io/minicourse-ajax-project/",
                     "code": "https://github.com/zhangtreefish/minicourse-ajax-project"
+                },
+                    {
+                    "id": "12",
+                    "genre": "front end",
+                    "title": "Udacity Alumni App",
+                    "dates": "2016-present",
+                    "description": "Contribute towards the front end development of the open source project for and by Udacity Alumni",
+                    "tools": ["React", "Redux", "Scalable React Boilerplate", "Grommet", "Node"],
+                    "image": "",
+                    "url": "https://udacity-alumni-api.herokuapp.com",
+                    "code": "https://github.com/udacityalumni/alumni-client"
                 }
             ];
 
