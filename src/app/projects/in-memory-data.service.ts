@@ -133,7 +133,18 @@ export class InMemoryDataService {
                     "image": "http://i.imgur.com/N5oMeud.jpg",
                     "url": "https://udacity-alumni-client.herokuapp.com",
                     "code": "https://github.com/udacityalumni/alumni-client"
-                }
+                },
+                    {
+                    "id": "13",
+                    "genre": "front end",
+                    "title": "Neighborhood Search",
+                    "dates": "2015-2016",
+                    "description": "Built a neighborhood application with interactive map and search list with KnockoutJS and jQuery",
+                    "tools": ["KnockoutJS", "jQuery"],
+                    "image": "http://i.imgur.com/ztDG76q.jpg",
+                    "url": "http://zhangtreefish.github.io/Project-5-for-Front-End-Web-Developer-Nanodegree/",
+                    "code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree"
+                    }
             ];
 
         return {projects};
