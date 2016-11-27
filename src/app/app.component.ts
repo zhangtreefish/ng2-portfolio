@@ -13,7 +13,7 @@ import { ProjectService } from './projects/project.service';
   directives: [ROUTER_DIRECTIVES]
 })
 export class AppComponent {
-  title = 'My portfolio!';
+  title = 'Susie Zhang';
   color = 'rgb(0, 250, 115)';
   size = '300%';
 }

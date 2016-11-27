@@ -14,7 +14,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ProjectsComponent implements OnInit, OnDestroy{
 	frontEndProjects: Project[];
 	fullStackProjects: Project[];
-	private _sub: any;
+	private _subscr: any;
 	private selectedId: string;
 
 	constructor(
@@ -23,7 +23,12 @@ export class ProjectsComponent implements OnInit, OnDestroy{
     	private _route: ActivatedRoute) {}
 
 	ngOnInit() {
-    this._sub = this._router
+		this.getProjects();
+		this.getProject(this.selectedId);
+	}
+
+    getProjects() {
+    	this._subscr = this._router
       	.routerState
       	.queryParams
     	.subscribe(params => {
@@ -35,9 +40,10 @@ export class ProjectsComponent implements OnInit, OnDestroy{
 			})
       	});
     }
+    getProject(id: string) {};
 
 	ngOnDestroy() {
-	this._sub.unsubscribe();
+	this._subscr.unsubscribe();
 	}
 
 	isSelected(project: Project) { return project.id === this.selectedId; }

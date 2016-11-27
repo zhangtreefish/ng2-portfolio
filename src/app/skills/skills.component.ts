@@ -19,4 +19,7 @@ export class SkillsComponent implements OnInit {
 	ngOnInit() {
 		this.skills = this._skillService.getSkills();
 	}
+	goResume() {
+		 window.location.href='http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree/';
+	}
 }
